@@ -1,8 +1,8 @@
-package com.ancestry.gatest;
+package com.ancestry.gatest.pojo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Request {
+public class Responses {
     @JsonProperty("RequestId")
     private String requestId;
 
@@ -15,11 +15,19 @@ public class Request {
     @JsonProperty("Payload")
     private PayloadData payloadData;
 
-    public Request(String requestId, String pipeline, String payloadSchemaVersion, PayloadData payloadData) {
+    @JsonProperty("Status")
+    private Status status;
+
+    @JsonProperty("PipelineRelease")
+    private String pipelineRelease;
+
+    public Responses(String requestId, String pipeline, String payloadSchemaVersion, PayloadData payloadData, Status status, String pipelineRelease) {
         this.requestId = requestId;
         this.pipeline = pipeline;
         this.payloadSchemaVersion = payloadSchemaVersion;
         this.payloadData = payloadData;
+        this.status = status;
+        this.pipelineRelease = pipelineRelease;
     }
 
     public String getRequestId() {
@@ -52,5 +60,21 @@ public class Request {
 
     public void setPayloadData(PayloadData payloadData) {
         this.payloadData = payloadData;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
+    public String getPipelineRelease() {
+        return pipelineRelease;
+    }
+
+    public void setPipelineRelease(String pipelineRelease) {
+        this.pipelineRelease = pipelineRelease;
     }
 }

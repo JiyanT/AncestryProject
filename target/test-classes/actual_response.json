@@ -1,0 +1,32 @@
+{
+  "Meta": {
+  "RequestorId":"newspapers",
+  "EnvelopeSchema Version": "5.0.1",
+  "System Time":"2019-02-06T23:48:12.461074Z",
+  "SystemId":"2019_02_06_23_48_1549496892_818501403622"
+},
+"Responses":[
+{
+"RequestId": "1604415e-a84c-4784-8434-6e9844568217",
+"Pipeline": "article-obit-or-not",
+"PayloadSchema Version": "3.0.1",
+
+"Payload": {
+"PageId":5455546,
+"SegmentId": "9d2d01f0-a8a9-4089-8d12-37ddfe4cd940",
+"ObitText": "Miss Milda Albert To Wed Mr. Kline Announcement U made b Mr. and Mrs. Gustave Albert of the entitlement of their daughter, Milda. to Mr. Raymond Kline, son of Mr. and Mrs. Ellsworth Kline, of Blandon.",
+"PageStateId": 2,
+"Probability": "7.60928e-05",
+"IsObit": false,
+    "Threshold": "0.5"
+  },
+  "Status": {
+    "Code":200,
+    "Message": "Success"
+  },
+  "PipelineRelease": "1.0.0"
+}
+  ]
+
+
+}
